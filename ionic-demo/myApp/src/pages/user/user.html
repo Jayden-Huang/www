@@ -1,0 +1,34 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>个人信息修改</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content >
+    <ion-list class="info">
+        <ion-item (click)="updateHeadFace()">
+           <button ion-item>
+              <ion-avatar item-start>
+                <img src="{{headFace}}"/>
+              </ion-avatar>
+              <h2>修改头像</h2>
+           </button>
+        </ion-item>
+     </ion-list>
+
+     <ion-list class="marginBottom">
+        <ion-item>
+           <ion-label>用户昵称：</ion-label>
+           <ion-input [(ngModel)]="nickName"  type="text"></ion-input>
+        </ion-item>
+     </ion-list>
+
+     <div padding text-center class="marginBottom">
+        <button ion-button class="primary" block (click)="saveNickName()">保存</button>
+     </div>
+     <div padding text-center class="marginBottom paddingTop">
+        <button ion-button class="danger" block (click)="logout()"  >注销</button>
+     </div>
+</ion-content>
